@@ -1,6 +1,6 @@
-$maincolor: hsl(215, 100%, 50%);
-$letterColors: hsl(216, 11%, 83%);
-$iconColor: hsl(216, 11%, 83%);
+$maincolor: hsl(0, 0%, 96%); //hsl(215, 100%, 50%)
+$letterColors: hsl(215, 100%, 50%);
+$iconColor: hsl(215, 100%, 50%);
 
 *{
     margin: 0;
@@ -10,23 +10,32 @@ $iconColor: hsl(216, 11%, 83%);
     color: $letterColors;
 }
 
+//START NAV
 a{
     text-decoration: none;
     color: $letterColors;
 }
 
 nav{
+    font-size: 1.7em;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     ul{
         list-style-type :none;
         display: flex;
         justify-content: space-around;
         width: 30%;  
+        font-size: 0.8em;
     }
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
     background-color: $maincolor;
+    .logo{
+        cursor: pointer;
+    }
 }
 
 .burguer{
@@ -92,3 +101,63 @@ nav{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px, -5px);
 }
+// END NAV
+
+// MAIN PAGE
+#home{
+    width: 100%;
+    height: 93vh;
+    background-image: url(https://lh3.googleusercontent.com/toV43LimlqfU_c4eTjEDRaZfEl7-AWeN6X-iugExmMGpAxuIBdQtHPMiQDVyffxxGZ-3apao8hdkkn4wV7L2hKMR0lu8jgWDFkcvKujlcgu6taFoxvGhdcsEm-6fAxCaWQyszwwzdSySt4_BLbhE4lYaZwcSzi8n7lfM9Py2SEfR1te3_D3aVigN-uE1LoPIFyDPQYuNhH9EGnl45SKPbrX9Fv0S_-xMiO-na0yRADslQ6VkSsv2klD5dNcwY9dHAqak8MQivKOx1Our68Cs-YTeqIn2f7qmIz523c6VZc6x2FsIVuNJZlU0AbL3snXDJ8PDM6oVE9d7w9z9ggfxHwHUGczcLoDV7AAvaEkv4sh7sATQFVO6GflRmmHKssR8OVI2b6qxFngPMkO8BJqMAaffjGQmrxp-3ozXdLGpsobbBgCEVG05bRbfHxeq1XqkLSnn2RdzDQ4zsw-EEUv55X39K2foQAIxbNo3wzcSTnQ9ImrAVbESzaFUijveJ4X9TdyaVlju9wCkH5pQLRdajG1Ry6O9gi5tk44QBegboqtFsP7gxj0Gsr1S64XdNASXGJg1cz3gzt37smR5XL3jhVturq3QBEjT_VDGWUs39jodKH7gSkkVXddjkhLSxoeNtC-p1d0zSklI6oLa5HtnxVeUkTlydxm6yJjllNi8jkeWDRbTVCOQDOI=w1641-h937-no);
+    background-color: #cccccc;
+    background-position: bottom;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    @media screen and (max-width: 768px){
+        background-position: 60% 50%;
+    }
+}
+
+
+
+.next{
+    margin-top: -6vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    div{
+        height: 6vh;
+        background-color: white;
+        display: inline-block;
+        border: solid 3px white;
+    }
+    div:not(#mid1, #mid2){
+        flex-grow: 1;
+    }
+    #mid1{
+        max-width: 40px;
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
+    #mid2{
+        max-width: 40px;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+}
+
+// END MAIN PAGE
+
+// PORTFOLIO
+#portfolio{
+    width: 80%;
+    position: relative;
+    margin: auto;
+    margin-top: 7vh;
+    height: 100vh;
+    h2{
+        font-size: 2.5em;
+        margin: 10px;
+    }
+    .allImgs{
+        display: flex;
+    }
+}
+// END PORTFOLIO
