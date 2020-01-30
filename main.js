@@ -26,7 +26,12 @@ var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-8vh";
+    document.getElementById("navbar").animate([
+        {transform: 'translateY(0px)'},
+        {transform: 'translateY(-300px)'}
+    ],{
+        duration: 1000
+    });
   }
   prevScrollpos = currentScrollPos;
 }
