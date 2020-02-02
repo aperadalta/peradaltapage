@@ -20,18 +20,38 @@ const NAVSLIDE = () =>{
 
 NAVSLIDE();
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
+
+var scrollPos = 0;
+
+window.addEventListener('scroll', function(){
+ 
+  if ((document.body.getBoundingClientRect()).top > scrollPos){
+        document.getElementById("navbar").animate([
+            {transform: 'translateY(-200px)'},
+            {transform: 'translateY(0px)'}
+        ],{
+            duration: 1000
+        });
+        document.getElementById("navbar").style.top = "0px";
+    }
+	else{
+        document.getElementById("navbar").animate([
+            {transform: 'translateY(0px)'},
+            {transform: 'translateY(-300px)'}
+        ],{
+            duration: 1000
+        });
+        document.getElementById("navbar").style.top = "-300px";
+    }
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
+
+
+/*
     document.getElementById("navbar").animate([
         {transform: 'translateY(0px)'},
         {transform: 'translateY(-300px)'}
     ],{
         duration: 1000
     });
-  }
-  prevScrollpos = currentScrollPos;
-}
+*/

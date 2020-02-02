@@ -1,6 +1,6 @@
-$maincolor: hsla(0, 0%, 100%, 0.85); //hsl(215, 100%, 50%)
-$letterColors: hsl(215, 100%, 50%);
-$iconColor: hsl(215, 100%, 50%);
+$maincolor: hsla(0, 0%, 100%, 0.938); //hsl(215, 100%, 50%)
+$letterColors: hsl(216, 75%, 26%);
+$iconColor: hsl(216, 75%, 26%);
 
 *{
     margin: 0;
@@ -33,6 +33,7 @@ nav{
     align-items: center;
     min-height: 8vh;
     background-color: $maincolor;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.7);
     .logo{
         cursor: pointer;
     }
@@ -162,17 +163,28 @@ nav{
         flex-wrap: wrap;
         position: relative;
         margin: auto;
+        .taemsa{background-image: url("https://i.pinimg.com/564x/2e/6d/c2/2e6dc2ebc4e8824a1937540e64499081.jpg");}
+        .atzur{background-image: url("https://i.pinimg.com/564x/1e/eb/33/1eeb330e1f70405483662871e882f249.jpg");}
         .content{
-            background-image: url("https://i.imgur.com/I5cUzsM.jpg");
             background-color: #cccccc;
-            background-position: bottom;
+            background-position: top;
             background-repeat: no-repeat; 
             background-size: cover;
             width: 28%;
+            @media screen and (max-width: 768px){
+                width: 90%;
+            }
             margin: 20px;
             height: 50vh;
             position: relative;
+            box-shadow: 4px 4px 10px rgba(37, 39, 39, 0.651);
+            transition: all .4s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.02);
+            }
             div{
+                width: 100%;
                 position: absolute;
                 bottom:0;
                 padding: 17px;
@@ -180,12 +192,16 @@ nav{
                 h3{
                     margin-bottom: 13px;
                 }
-                a{
+                i{
                     float: right;
-                    margin-top: 7px;
+                    margin: 20px 7px 0 7px;
+                    font-size: 1.65em;
+                    a{z-index: 80;}
                 }
             }
         }
     }
 }
+
+
 // END PORTFOLIO
