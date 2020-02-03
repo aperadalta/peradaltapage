@@ -191,15 +191,14 @@ nav .logo {
           clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
-#portfolio {
+section:not(#home) {
   width: 80%;
   position: relative;
   margin: auto;
   margin-top: 7vh;
-  height: 100vh;
 }
 
-#portfolio h2 {
+section:not(#home) h2 {
   font-size: 2.5em;
   margin: 10px;
 }
@@ -222,6 +221,10 @@ nav .logo {
 
 #portfolio .allImgs .atzur {
   background-image: url("https://i.pinimg.com/564x/1e/eb/33/1eeb330e1f70405483662871e882f249.jpg");
+}
+
+#portfolio .allImgs .drumCodePen {
+  background-image: url("https://i.imgur.com/gqXboQz.jpg");
 }
 
 #portfolio .allImgs .content {
@@ -263,13 +266,33 @@ nav .logo {
   margin-bottom: 13px;
 }
 
-#portfolio .allImgs .content div i {
+#portfolio .allImgs .content div i, #portfolio .allImgs .content div svg {
   float: right;
   margin: 20px 7px 0 7px;
   font-size: 1.65em;
 }
 
-#portfolio .allImgs .content div i a {
+#portfolio .allImgs .content div i a, #portfolio .allImgs .content div svg a {
   z-index: 80;
+}
+
+footer {
+  width: 100%;
+  background-color: #113874;
+  text-align: center;
+  padding: 1%;
+  position: relative;
+  bottom: 0px;
+  line-height: 1.6;
+  font-size: 1.2em;
+}
+
+footer * {
+  color: rgba(255, 255, 255, 0.938);
+  margin: 5px;
+}
+
+footer a {
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=css.css.map */
