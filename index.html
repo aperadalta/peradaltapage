@@ -14,9 +14,9 @@
             <h4>peradalta</h4>
         </div>
         <ul>
-            <li><a href="#">Portfolio</a></li> 
-            <li><a href="#">CV</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#portfolio">Portfolio</a></li> 
+            <li><a href="#curriculum">CV</a></li>
+            <li><a href="#contact" id="accessContact">Contact</a></li>
         </ul>
         <div class="burguer">
             <div class="line1"></div>
@@ -38,16 +38,16 @@
         <h2>Portfolio</h2>
         <hr>
         <div class="allImgs">
-            <div class="content taemsa">
+            <div class="content taemsa" id="taemsa">
                 <div>
                     <h3>Taemsa Website</h3>
                     <p>Website designed and programmed for Taemsa</p>
                     <a href="https://www.pinterest.es/pin/622270873499671367/" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    <a href="taemsa.com" target="_blank"><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+                    <a href="www.taemsa.com" target="_blank"><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
                 </div>   
             </div>
 
-            <div class="content atzur">
+            <div class="content atzur" id="atzur">
                 <div>
                     <h3>Atzur Menu</h3>
                     <p>Menu I designed for Atzur Restaurant</p>
@@ -59,7 +59,7 @@
                 </div> 
             </div>
 
-            <div class="content drumCodePen">
+            <div class="content drumCodePen" id="codepen">
                 <div>
                     <h3>Drum</h3>
                     <p>Drum I made while I was studying through freeCodeCamp</p>
@@ -76,9 +76,9 @@
                 </div>   
             </div>
 
-            <div class="content">
+            <div class="content module">
                 <div>
-                    <h3>Taemsa Website</h3>
+                    <h3>The Zombies game</h3>
                     <p>Website designed and programmed for Taemsa</p>
                     <a>W</a>
                     <a>P</a>
@@ -87,7 +87,7 @@
 
             <div class="content">
                 <div>
-                    <h3>Taemsa Website</h3>
+                    <h3>Nens del Vendrell Magazine</h3>
                     <p>Website designed and programmed for Taemsa</p>
                     <a>W</a>
                     <a>P</a>
@@ -96,10 +96,197 @@
         </div>
     </section>
 
-    <section>
+    <section id="curriculum">
         <h2>Curriculum</h2>
         <hr>
+        <div id="curriculumContent">
+            <div class="twoParts">
+                <div class="curriculumContent">
+                    <h3>Languages</h3><hr>
+                    <div id="languages">
+                        <div class="languages">
+                            <h4>Catalan</h4>
+                            <img src="https://www.crwflags.com/FOTW/images/e/es-ct.gif"></img><br>
+                            <stars>&#11088;&#11088;&#11088;&#11088;&#11088;</stars>
+                            <p>Mother <br>language</p>
+                        </div>
+                        <div class="languages">
+                            <h4>Spanish</h4>
+                            <img src="https://cdn.countryflags.com/thumbs/spain/flag-800.png"></img><br>
+                            <stars>&#11088;&#11088;&#11088;&#11088;&#11088;</stars>
+                            <p>Mother <br>language</p>
+                        </div>
+                        <div class="languages">
+                            <h4>English</h4>
+                            <img src="https://cdn.countryflags.com/thumbs/united-kingdom/flag-800.png"></img><br>
+                            <stars>&#11088;&#11088;&#11088;&#11088;</stars>
+                            <p>C1</p>
+                        </div>
+                        <div class="languages">
+                            <h4>German</h4>
+                            <img src="https://cdn.countryflags.com/thumbs/germany/flag-800.png"></img><br>
+                            <stars>&#11088;</stars>
+                            <p>A1</p>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="curriculumContent left">
+                    <h3>Studies</h3><hr style="margin-bottom: 3vh">
+                    <b><p>2019</p></b>
+                    <p>Full Stack Developer</p>
+                    <p>freeCodeCamp - Online</p>
+    
+                    <br>
+
+                    <b><p>2018</p></b>
+                    <p>Design and Management of the Graphic Production</p>
+                    <p>Certificate of Higher Education</p>
+                    <p>Institut Pere Martell - Tarragona</p>
+    
+                    <br>
+
+                    <b><p>2016</p></b>
+                    <p>Basic course of Digital Marketing</p>
+                    <p>Google - Online</p>
+                    <p>Introduction to Gamification (MOOC)</p>
+                    <p>Universitat Oberta de Catalunya - Míriadax (Online)</p>
+    
+                    <br>
+
+                    <b><p>2014</p></b>
+                    <p>Development of Multiplatform Aplications</p>
+                    <p>Certificate of Higher Education - Only 1st year</p>
+                    <p>Institut Ausias March - Barcelona</p>
+                </div>
+
+                <div class="curriculumContent left">
+                    <h3>Skills</h3><hr style="margin-bottom: 3vh">
+                    <h4>Adobe</h4>
+                    <div id="adobe">
+                        <div class="adobeSkills">
+                            <p>Illustrator</p>
+                        </div>
+                        <div class="adobeSkills">
+                            <p>InDesign</p>
+                        </div>
+                        <div class="adobeSkills">
+                            <p>Photoshop</p>
+                        </div>
+                        <div class="adobeSkills">
+                            <p>Adobe XD</p>
+                        </div>
+                    </div>
+
+                    <h4>Programming</h4>
+                    <div id="programming">
+                        <div class="twoParts">
+                            <p>JavaScript</p>
+                            <meter min ="0" value="70" max="100"></meter>
+                            <p>jQuery</p>
+                            <meter min ="0" value="80" max="100"></meter>
+                            <p>React</p>
+                            <meter min ="0" value="20" max="100"></meter>
+                        </div>
+                        <div class="twoParts">
+                            <p>CSS</p>
+                            <meter min ="0" value="85" max="100"></meter>
+                            <p>SASS</p>
+                            <meter min ="0" value="80" max="100"></meter>
+                            <p>HTML5</p>
+                            <meter min ="0" value="88" max="100"></meter>
+                            <p>PHP</p>
+                            <meter min ="0" value="30" max="100"></meter>
+                        </div>
+                    </div>
+                    
+                    <!--<div id="softSkills">
+                        <h4>Soft Skills</h4>
+                        <p>Teamwork</p><meter min ="0" value="100" max="100"></meter>
+                        <p>Comunication</p><meter min ="0" value="90" max="100"></meter>
+                        <p>Positive actitude</p><meter min ="0" value="80" max="100"></meter>
+                        <p>Creative</p><meter min ="0" value="90" max="100"></meter>
+                    </div>-->
+                    
+
+                </div>
+            </div>
+
+            <div class="twoParts">
+                <div class="curriculumContent left">
+                    <h3>Experience</h3><hr style="margin-bottom: 3vh">
+                    <b><p>August 2018 - Present</p></b>
+                    <p>Techical Support Specialist - Google</p>
+                    <p>Voxpro - Cork</p>
+    
+                    <br>
+    
+                    <b><p>November 2017 - May 2018</p></b>
+                    <p>Lead Graphic Designer & Programmer</p>
+                    <p>Taemsa - Tarragona, Spain</p>
+    
+                    <br>
+    
+                    <b><p>April 2016 - October 2017</p></b>
+                    <p>Graphic Designer</p>
+                    <p>Lacasablava - El Vendrell, Spain</p>
+    
+                    <br>
+    
+                    <b><p>August 2016 - August 2016</p></b>
+                    <p>Postman (with motorbike)</p>
+                    <p>Correos - Segur de Calafell, Spain</p>
+    
+                    <br>
+    
+                    <b><p>May 2015 - May 2016</p></b>
+                    <p>Cashier and refiller</p>
+                    <p>Hipermercat Esclat - El Vendrell, Spain</p>
+    
+                </div>
+
+                <div class="curriculumContent left">
+                    <h3>Volunteering</h3><hr style="margin-bottom: 3vh">
+
+                    <p>January 2017 - May 2018</p>
+                    <p>Vicepresident</p>
+                    <p>Associació Tornem Alego - El Vendrell</p>
+
+                    <br>
+
+                    <p>November 2015 - January 2018</p>
+                    <p>Head of the Social Area</p>
+                    <p>Nens del Vendrell (Human Towers)</p>
+                    <p>www.nensdelvendrell.cat</p>
+
+                </div>
+
+                <div class="curriculumContent left" style="margin-bottom: 3vh">
+                    <h3>Interests</h3><hr style="margin-bottom: 3vh">
+                    <h4>Traveling</h4>
+                    <p>I think it’s one of the best ways to open your mind, learn from people and see other ways to live. </p>
+                    <h4>Sports</h4>
+                    <p>Played basketball for seven years. After that, four years of human towers and one year of rugby!</p>
+                    <h4>Learning</h4>
+                    <p>Constantly trying to learn new things and improving keeps your mind clear and excited!</p>
+                    <h4>Creativity</h4>
+                    <p>I love doing anything related with it, reading, music, cinema, cooking, designing...</p>
+                </div>
+
+                <a  href="https://drive.google.com/file/d/1p1rNmUwTMy-nGzXq1ip6CgX58G-66I0w/view?usp=sharing" target="_blank"><h4 id="downloadCV">> Download it here!</h4></a>
+                
+            </div>
+        </div>
     </section>
+
+    <div id="contact">
+        <h2>Contact</h2>
+
+        <div class="close" id="close">
+            <div id="line1"></div>
+            <div id="line2"></div>
+        </div>
+    </div>
 
     <footer>
         <p>adria.peradalta@gmail.com</p>

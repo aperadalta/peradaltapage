@@ -195,7 +195,7 @@ section:not(#home) {
   width: 80%;
   position: relative;
   margin: auto;
-  margin-top: 7vh;
+  margin-top: 20vh;
 }
 
 section:not(#home) h2 {
@@ -225,6 +225,37 @@ section:not(#home) h2 {
 
 #portfolio .allImgs .drumCodePen {
   background-image: url("https://i.imgur.com/gqXboQz.jpg");
+}
+
+#portfolio .allImgs:hover > .content {
+  -webkit-animation: try 0.5s ease-in;
+          animation: try 0.5s ease-in;
+}
+
+@-webkit-keyframes try {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes try {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 #portfolio .allImgs .content {
@@ -276,6 +307,197 @@ section:not(#home) h2 {
   z-index: 80;
 }
 
+#curriculum #curriculumContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  line-height: 1.6;
+}
+
+#curriculum #curriculumContent .twoParts {
+  width: 45%;
+  /*
+            #softSkills{
+                margin-top: 4vh;
+                text-align: right;
+                p, meter{
+                    display: inline-block;
+                    margin-top: 10px;
+                }
+                meter{
+                    width: 60%;
+                    position: relative;
+                    right: 0;
+                    @media screen and (max-width: 768px){
+                        width: 90%;
+                    }
+                }
+                h4{
+                    text-align: left;
+                }
+            }
+*/
+}
+
+@media screen and (max-width: 768px) {
+  #curriculum #curriculumContent .twoParts {
+    width: 90%;
+  }
+}
+
+#curriculum #curriculumContent .twoParts .curriculumContent {
+  margin-top: 7vh;
+}
+
+#curriculum #curriculumContent .twoParts .left p, #curriculum #curriculumContent .twoParts .left meter {
+  margin-left: 20px;
+}
+
+#curriculum #curriculumContent .twoParts meter {
+  width: 90%;
+}
+
+#curriculum #curriculumContent .twoParts h3 {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+#curriculum #curriculumContent .twoParts #languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+}
+
+#curriculum #curriculumContent .twoParts #languages .languages {
+  margin-top: 4vh;
+  text-align: center;
+}
+
+#curriculum #curriculumContent .twoParts #languages .languages img {
+  height: 40px;
+}
+
+#curriculum #curriculumContent .twoParts #languages .languages *:not(h4) {
+  margin-top: 10px;
+}
+
+#curriculum #curriculumContent .twoParts #languages .languages p {
+  font-weight: bold;
+}
+
+#curriculum #curriculumContent .twoParts #adobe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 4vh;
+}
+
+#curriculum #curriculumContent .twoParts #adobe .adobeSkills {
+  margin-top: 4vh;
+  text-align: center;
+}
+
+#curriculum #curriculumContent .twoParts #programming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+}
+
+#curriculum #curriculumContent .twoParts #programming .twoParts {
+  margin-top: 1vh;
+}
+
+#curriculum #curriculumContent .twoParts #programming meter {
+  margin-bottom: 7px;
+}
+
+#curriculum #curriculumContent .twoParts meter::-webkit-meter-optimum-value {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#113874));
+  background-image: linear-gradient(#113874);
+}
+
+#curriculum #curriculumContent .twoParts meter::-webkit-meter-bar {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bdbcbb));
+  background-image: linear-gradient(#bdbcbb);
+}
+
+#curriculum #curriculumContent .twoParts meter::-webkit-meter-bar,
+#curriculum #curriculumContent .twoParts meter::-webkit-meter-optimum-value {
+  border-radius: 5px;
+}
+
+#downloadCV {
+  text-align: right;
+}
+
+#downloadCV:hover {
+  color: #113874;
+  opacity: 0.8;
+}
+
+#contact {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: -99;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+#contact .close div {
+  width: 25px;
+  height: 3px;
+  background-color: #113874;
+  margin: 4px;
+}
+
+#contact .close {
+  position: fixed;
+  top: 20%;
+  right: 20%;
+  cursor: pointer;
+}
+
+#contact #line1 {
+  -webkit-transform: rotate(-45deg) translate(-2px, 2px);
+          transform: rotate(-45deg) translate(-2px, 2px);
+}
+
+#contact #line2 {
+  -webkit-transform: rotate(45deg) translate(-2px, -2px);
+          transform: rotate(45deg) translate(-2px, -2px);
+}
+
 footer {
   width: 100%;
   background-color: #113874;
@@ -285,6 +507,7 @@ footer {
   bottom: 0px;
   line-height: 1.6;
   font-size: 1.2em;
+  margin-top: 7vh;
 }
 
 footer * {
