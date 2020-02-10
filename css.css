@@ -307,6 +307,80 @@ section:not(#home) h2 {
   z-index: 80;
 }
 
+.displayNone {
+  display: none;
+  padding: 15%;
+}
+
+.single-chart {
+  width: 130px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .single-chart {
+    width: 100px;
+  }
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  -webkit-animation: progress 1s ease-out forwards;
+          animation: progress 1s ease-out forwards;
+}
+
+@-webkit-keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.circular-chart.purple .circle {
+  stroke: #5d2f61;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.circular-chart.pink .circle {
+  stroke: #9c2288;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
 #curriculum #curriculumContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,6 +486,10 @@ section:not(#home) h2 {
   text-align: center;
 }
 
+#curriculum #curriculumContent .twoParts #adobe p {
+  margin: 0;
+}
+
 #curriculum #curriculumContent .twoParts #programming {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,6 +533,11 @@ section:not(#home) h2 {
   opacity: 0.8;
 }
 
+.red {
+  color: rgba(137, 11, 59, 0.856);
+  font-weight: bold;
+}
+
 #contact {
   position: fixed;
   top: 0;
@@ -474,26 +557,28 @@ section:not(#home) h2 {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-#contact .close div {
+.close div {
   width: 25px;
   height: 3px;
   background-color: #113874;
   margin: 4px;
 }
 
-#contact .close {
+.close {
+  opacity: 0;
+  z-index: -1;
   position: fixed;
   top: 20%;
   right: 20%;
   cursor: pointer;
 }
 
-#contact #line1 {
-  -webkit-transform: rotate(-45deg) translate(-2px, 2px);
-          transform: rotate(-45deg) translate(-2px, 2px);
+.line1 {
+  -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+          transform: rotate(-45deg) translate(-3px, 3px);
 }
 
-#contact #line2 {
+.line2 {
   -webkit-transform: rotate(45deg) translate(-2px, -2px);
           transform: rotate(45deg) translate(-2px, -2px);
 }

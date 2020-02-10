@@ -1,5 +1,6 @@
 $maincolor: hsla(0, 0%, 100%, 0.938); //hsl(215, 100%, 50%)
 $letterColors: hsl(216, 75%, 26%);
+$secondLetter: hsla(337, 85%, 29%, 0.856);;
 $iconColor: hsl(216, 75%, 26%);
 
 *{
@@ -222,9 +223,78 @@ section:not(#home){
     }
 }
 
+
+
+// CONTENT PORFOLIO
+.displayNone{
+    display: none;
+    padding: 15%;
+}
+
 // END PORTFOLIO
 
 // CURRICULUM
+//something
+.single-chart {
+    width: 130px;
+    justify-content: space-around ;
+    margin: auto;
+
+    @media screen and (max-width: 768px){
+        width: 100px;
+    }
+  }
+
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+  .circular-chart.orange .circle {
+    stroke: #ff9f00;
+  }
+  
+  .circular-chart.purple .circle {
+    stroke: rgb(93, 47, 97);
+  }
+  
+  .circular-chart.blue .circle {
+    stroke: #3c9ee5;
+  }
+
+  .circular-chart.pink .circle {
+    stroke: #9c2288;
+  }
+  
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+//somethingg
+
 #curriculum{
     #curriculumContent{
         display: flex;
@@ -274,6 +344,9 @@ section:not(#home){
                 .adobeSkills{
                     margin-top: 4vh;
                     text-align: center;
+                }
+                p{
+                    margin: 0;
                 }
             }
             #programming{
@@ -334,6 +407,11 @@ section:not(#home){
     }
 }
 
+.red{
+    color: $secondLetter;
+    font-weight: bold;
+}
+
 // CONTACT
 
 #contact{
@@ -352,24 +430,24 @@ section:not(#home){
 
     background-color: rgba(255, 255, 255, 0.85);
 
-    .close div{
-        width: 25px;
-        height: 3px;
-        background-color: $iconColor;
-        margin: 4px;
-    }
-    .close{
-        position: fixed;
-        top: 20%;
-        right: 20%;
-        cursor: pointer;
-    }
-    #line1{transform: rotate(-45deg) translate(-2px, 2px);}
-    #line2{transform: rotate(45deg) translate(-2px, -2px);}
-
-
 }
 
+.close div{
+    width: 25px;
+    height: 3px;
+    background-color: $iconColor;
+    margin: 4px;
+}
+.close{
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    top: 20%;
+    right: 20%;
+    cursor: pointer;
+}
+.line1{transform: rotate(-45deg) translate(-3px, 3px);}
+.line2{transform: rotate(45deg) translate(-2px, -2px);}
 // END OF CONTACT
 
 // FOOTER

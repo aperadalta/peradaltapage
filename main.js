@@ -29,21 +29,9 @@ window.onload = function(){
     window.addEventListener('scroll', function(){
     
     if ((document.body.getBoundingClientRect()).top > scrollPos){
-            document.getElementById("navbar").animate([
-                {transform: 'translateY(-200px)'},
-                {transform: 'translateY(0px)'}
-            ],{
-                duration: 1000
-            });
-            document.getElementById("navbar").style.top = "0px";
+            document.getElementById("navbar").style.top = "0";
         }
         else{
-            document.getElementById("navbar").animate([
-                {transform: 'translateY(0px)'},
-                {transform: 'translateY(-300px)'}
-            ],{
-                duration: 1000
-            });
             document.getElementById("navbar").style.top = "-300px";
         }
         scrollPos = (document.body.getBoundingClientRect()).top;
@@ -52,21 +40,32 @@ window.onload = function(){
 
     //CONTACT
     document.getElementById('accessContact').onclick = function(){
-        document.getElementById('contact').style.cssText = "opacity: 1; z-index: 9999";
+        document.getElementById('contact').style.cssText = "opacity: 1; z-index: 999";
+        document.getElementById('close').style.cssText = "opacity: 1; z-index: 9999";
     }
 
-    document.getElementById('close').onclick = function(){
-        document.getElementById('contact').style.cssText = "opacity: 0; z-index: -1";
-
-    }
+    
     //END CONTACT
 
-    var content = document.getElementsByClassName('content');
+    const content = document.getElementsByClassName('content'),
+          closing = document.getElementById('close');
+    var makeFullScreen;
     
     for (var i=0; i < content.length; i++) {
         content.item(i).onclick = function(){
-            console.log(content);
+            var transform = "position: fixed; top: 0; width: 100%; height: 100%; display: block; background-color: white;";
+            makeFullScreen = this.id;
+            document.getElementById(makeFullScreen+'Content').style.cssText = transform;
+            closing.style.cssText = "opacity: 1; z-index: 9999";
         }
+    }
+
+    closing.onclick = function(){
+        var close = "opacity: 0; z-index: -1";
+        document.getElementById('contact').style.cssText = close;
+        closing.style.cssText = close;
+        document.getElementById(makeFullScreen+'Content').style.cssText = close;
+        
     }
 }
 
